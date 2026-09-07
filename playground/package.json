@@ -1,0 +1,16 @@
+{
+	"name": "playground",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"start": "node ./dist/server/entry.mjs"
+	},
+	"dependencies": {
+		"astro": "^7.3.1",
+		"astro-vt-callback-wrapper": "workspace:*"
+	}
+}

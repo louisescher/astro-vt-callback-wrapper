@@ -1,0 +1,22 @@
+---
+import { ClientRouter } from "astro:transitions";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<ClientRouter />
+		<title>Playground</title>
+	</head>
+	<body>
+		<slot />
+		<script>
+			import { onPageLoad } from "astro-vt-callback-wrapper";
+
+			onPageLoad(() => console.log("This logs on every page"), "*");
+			onPageLoad(() => console.log("This logs on page-3"), ["/page-3"]);
+		</script>
+	</body>
+</html>
