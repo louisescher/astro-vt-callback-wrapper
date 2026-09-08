@@ -6,4 +6,9 @@ import Layout from "../layouts/Layout.astro";
 	<div>Page 2 (check browser console)</div>
 	<a href="/">Page 1 (generic)</a>{" "}
 	<a href="/page-3">Page 3 (special)</a>
+	<script>
+		import { onPageLoad } from "astro-vt-callback-wrapper";
+
+		onPageLoad(() => console.log("This logs on page-2"));
+	</script>
 </Layout>
